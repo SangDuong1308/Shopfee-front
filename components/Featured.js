@@ -10,6 +10,7 @@ const Bg = styled.div`
 const Title = styled.h1`
   margin:0;
   font-weight:normal;
+  font-size: 3rem;
 `;
 const Desc = styled.p`
   color:#aaa;
@@ -39,18 +40,20 @@ const ButtonsWrapper = styled.div`
   margin-top: 25px;
 `;
 
-export default function Featured({}) {
+export default function Featured({product}) {
     return (
       <Bg>
         <Center>
           <ColumnsWrapper>
             <Column>
               <div>
+                {/* <Title>{product.title}</Title> */}
                 <Title>Meet our new products!</Title>
                 <Desc>
                   Try one of our signature selections and see what everyone’s
                   talking about or select ‘All Products’ at the top of the page
                   to view all the possibilities.
+                  {/* {product.description} */}
                 </Desc>
                 <ButtonsWrapper>
                   <Button white outline>
@@ -73,17 +76,6 @@ export default function Featured({}) {
             <Column>
               <img src="https://ecommerce-proj-hcmus.s3.amazonaws.com/1693448695344.png"></img>
             </Column>
-            {/* <Column>
-                        <div>
-                        <Title>Meet our new products!</Title>
-                            <Desc>Try one of our signature selections and see what everyone’s 
-                            talking about or select ‘All Products’ 
-                            at the top of the page to view 
-                            all the possibilities.</Desc>
-                            <Button white outline size="l">Read more</Button>
-                            <Button primary size="l">Add to cart</Button>
-                        </div>
-                    </Column> */}
           </ColumnsWrapper>
         </Center>
       </Bg>
