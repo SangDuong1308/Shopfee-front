@@ -1,6 +1,7 @@
 import { styled } from "styled-components"
 import Center from "./Center";
 import Button from "./Button";
+import ButtonLink from "./ButtonLink";
 
 const Bg = styled.div`
   background-color: #222;
@@ -19,7 +20,7 @@ const Desc = styled.p`
 
 const ColumnsWrapper = styled.div`
     display: grid;
-    grid-template-columns: .9fr 1.1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 40px;
     img{
         max-width: 100%;
@@ -47,18 +48,14 @@ export default function Featured({product}) {
           <ColumnsWrapper>
             <Column>
               <div>
-                {/* <Title>{product.title}</Title> */}
-                <Title>Meet our new products!</Title>
+                <Title>{product.title}</Title>
                 <Desc>
-                  Try one of our signature selections and see what everyone’s
-                  talking about or select ‘All Products’ at the top of the page
-                  to view all the possibilities.
-                  {/* {product.description} */}
+                  {product.description}
                 </Desc>
                 <ButtonsWrapper>
-                  <Button white outline>
+                  <ButtonLink href = {'/products/'+product._id} white outline>
                     Read more
-                  </Button>
+                  </ButtonLink>
                   <Button primary>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
