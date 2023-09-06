@@ -84,7 +84,7 @@ export default function Featured({product}) {
             </Column>
             <Column>
               {/* <img src="https://ecommerce-proj-hcmus.s3.amazonaws.com/1693448695344.png"></img> */}
-              <img src="https://ecommerce-proj-hcmus.s3.amazonaws.com/1693926262312.png"></img>
+              <img src="https://ecommerce-proj-hcmus.s3.amazonaws.com/1694016079020.png"></img>
             </Column>
           </ColumnsWrapper>
         </Center>
